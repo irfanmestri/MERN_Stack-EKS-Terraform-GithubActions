@@ -9,8 +9,8 @@ terraform {
   backend "s3" {
     bucket         = "my-eks-terra-bucket"
     region         = "us-east-1"
-    key            = "eks/terra/terraform.tfstate"
-    //dynamodb_table = "Lock-Files"
+    key            = "eks/terraform.tfstate"
+    dynamodb_table = "Lock-Files"
     encrypt        = true
   }
 }
